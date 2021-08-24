@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <title>Weather app</title>
+</head>
+
+<body>
+
+  <nav id="navbar" class="navbar">
+    <h1 id="place">--, --</h1>
+    <div class="search-items">
+      <button id="refresh" type="submit"><i class="fas fa-sync"></i></button>
+      <input id="input-value" autocomplete="off" type="search" placeholder="Search">
+      <button id="submit-btn" type="submit"><i class="fas fa-search fa-1x "></i></button>
+    </div>
+  </nav>
+
+  <div class="weather-container">
+
+    <div class="basic-info">
+      <h1 class="tempt"> <span id="tempt">--</span><span class="deg"> &#8451;</span> </h1>
+      <h3 class="desc"><span id="desc">--</span><span id="desc-icon"></span></h3>
+      <h6 class="max-min">
+        <i class="fas fa-temperature-high"></i> <span id="max-tempt">--</span><span
+          class="deg-small">&#8451;</span>&nbsp;&nbsp;
+        <i class="fas fa-temperature-low"></i> <span id="min-tempt">--</span><span class="deg-small">&#8451;</span>
+      </h6>
+    </div>
+
+    <div class="hourly-container">
+      <h3>HOURLY FORECAST</h3>
+      <button id="slideleft" type="button"><i class="fas fa-chevron-left"></i></button>
+      <button id="slideright" type="button"><i class="fas fa-chevron-right"></i></button>
+      <div id="hourly-row" class="hourly-row">
+        <span class="data-available">No data available</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="daily-container">
+    <h3>DAILY FORECAST</h3>
+    <div class="daily-row" id="daily-row">
+      <span class="data-available">No data available</span>
+    </div>
+  </div>
+
+
+  <div class="advance-info">
+    <h3>Day Details</h3>
+    <br>
+
+    <div class="advance-container">
+      <div class="rise-set">
+        <div class="rise">
+          <h5>SUNRISE</h5>
+          <h6><span class="iconify" data-icon="wi:sunrise" style="color: white;"></span>&nbsp;&nbsp;<span
+              id="rise-time">--</span></h6>
+        </div>
+        <br>
+        <div class="set">
+          <h5>SUNSET</h5>
+          <h6><span class="iconify" data-icon="wi:sunset" style="color: white;"></span>&nbsp;&nbsp;<span
+              id="set-time">--</span></h6>
+        </div>
+      </div>
+
+      <div class="factors">
+        <div class="advance-block">
+          <h6 class="advance-heading">Wind</h6>
+          <h5> <span id="wind-speed">--</span> km/h</h5>
+        </div>
+
+        <div class="advance-block">
+          <h6 class="advance-heading">Humidity</h6>
+          <h5><span id="humidity">--</span>%</h5>
+        </div>
+
+        <div class="advance-block">
+          <h6 class="advance-heading">UV Index</h6>
+          <h5 id="UV">--</h5>
+        </div>
+        <div class="advance-block">
+          <h6 class="advance-heading">Pressure</h6>
+          <h5><span id="pressure">--</span> hPa</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h2>Built using open weather API</h2>
+    <a href="https://github.com/bhandarii7/Weather-app/upload" target="_blank" ><img src="./images/GitHub.png" alt=""></a>
+  </div>
+
+
+  <script src="./app.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>
